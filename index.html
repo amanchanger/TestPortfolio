@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+/* ====== CSS ====== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  line-height:1.6;
+}
+header{
+  background:#111;
+  color:#fff;
+  padding:15px 0;
+  position:sticky;
+  top:0;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  width:90%;
+  margin:auto;
+}
+nav ul{
+  display:flex;
+  list-style:none;
+}
+nav ul li{
+  margin-left:20px;
+}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+}
+.hero{
+  height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(to right,#667eea,#764ba2);
+  color:white;
+  flex-direction:column;
+}
+.hero h1{
+  font-size:3rem;
+}
+.hero button{
+  padding:10px 20px;
+  border:none;
+  background:#fff;
+  color:#333;
+  margin-top:15px;
+  cursor:pointer;
+}
+section{
+  padding:60px 20px;
+  width:90%;
+  margin:auto;
+}
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  padding:20px;
+  background:#f4f4f4;
+  border-radius:8px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+}
+footer{
+  text-align:center;
+  background:#111;
+  color:#fff;
+  padding:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h2>MyPortfolio</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<h1>Hello, I'm Aman</h1>
+<p>Python | SQL | Excel</p>
+<button onclick="scrollToSection()">View Projects</button>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I am a beginner data enthusiast learning Python, SQL and Excel. This is my sample portfolio for Git deployment practice.</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">
+<h3>Project 1</h3>
+<p>Portfolio Website</p>
+</div>
+<div class="card">
+<h3>Project 2</h3>
+<p>Python Data Analysis</p>
+</div>
+<div class="card">
+<h3>Project 3</h3>
+<p>SQL Database Project</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: your@email.com</p>
+<button onclick="showMessage()">Say Hello</button>
+</section>
+
+<footer>
+<p>© 2026 Aman Portfolio</p>
+</footer>
+
+<script>
+// ===== JavaScript =====
+function scrollToSection(){
+  document.getElementById("projects").scrollIntoView({behavior:"smooth"});
+}
+
+function showMessage(){
+  alert("Thanks for visiting my portfolio!");
+}
+</script>
+
+</body>
+</html>
